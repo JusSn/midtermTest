@@ -31,14 +31,14 @@ public:
     void f() {cout << "X f" << endl;}
 };
 
-X foo(A& a, X x) {
+X foo(A& a, X x);/* {
     cout << "*** in foo" << endl;
     A aa;
     aa = a;
     X xx(x);
     cout << "*** leaving foo" << endl;
     return xx;
-}
+}*/
 
 int main() {
     cout << "*** starting main" << endl;
