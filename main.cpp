@@ -7,21 +7,21 @@ public:
     A(A& a) {cout << "A copy ctor" << endl;}
     virtual ~A() {cout << "A dtor" << endl;}
     virtual void f() {cout << "A f" << endl;}
-}
+};
 
 class B : public A {
 public:
     B() {cout << "B ctor" << endl;}
     ~B() {cout << "B dtor" << endl;}
     void f() {cout << "B f" << endl;}
-}
+};
 
 class C : public B {
 public:
     C() {cout << "C ctor" << endl;}
     ~C() {cout << "C dtor" << endl;}
     void f() {cout << "C f" << endl;}
-}
+};
 
 class X {
 public:
@@ -29,9 +29,9 @@ public:
     X(X& x) {cout << "X copy ctor" << endl;}
     ~X() {cout << "X dtor" << endl;}
     void f() {cout << "X f" << endl;}
-}
+};
 
-X foo(A& a; X x) {
+X foo(A& a, X x) {
     cout << "*** in foo" << endl;
     A aa;
     aa = a;
@@ -41,7 +41,7 @@ X foo(A& a; X x) {
 }
 
 int main() {
-    cout "*** starting main" << endl;
+    cout << "*** starting main" << endl;
     A* a_ptr_to_a = new A;
     B* b_ptr_to_b = new B;
     C* c_ptr_to_c = new C;
